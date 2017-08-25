@@ -1,19 +1,40 @@
 import java.util.Scanner;
 class EmployeeDetails{
-public void showmenu()
-{
+Scanner sc=new Scanner(System.in);
+void enterData(){
+
 int option;
-Scanner sc= new Scanner(System.in);
 System.out.println("1.Enter Data");
-System.out.println("2.Update");
-System.out.println("3.Display Data");
-System.out.println("4.Exit");
-System.out.print("\nChoose the option:");
-option = sc.nextInt();
+System.out.println("\nChoose the option:   ");
+option= sc.nextInt();
 }
-public static void main(String[] args)
+
+ void displayData()
 {
-   EmployeeDetails h= new EmployeeDetails();
-     h.showmenu();
+
+int option;
+System.out.println("2.Display Data");
+System.out.println("\nChoose the option:   ");
+option= sc.nextInt();
 }
+
+ void exit()
+{
+
+int option;
+System.out.println("3.Exit");
+System.out.println("\nChoose the option:   ");
+option= sc.nextInt();
+}
+
+public static void main(String[] args){
+
+ EmployeeDetails h= new EmployeeDetails();
+ h.enterData();
+ h.displayData();
+ h.exit();
+
+
+}
+
 }
